@@ -51,7 +51,7 @@ include 'Includes/functions/functions.php';
 
 				//Check if User Exist In database
 
-				$stmt = $con->prepare("Select admin_id, username,password from barber_admin where username = ? and password = ?");
+				$stmt->prepare("Select admin_id, username,password from barber_admin where username = ? and password = ?");
 				$stmt->execute(array($username, $hashedPass));
 				$row = $stmt->fetch();
 				$count = $stmt->rowCount();
