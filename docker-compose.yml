@@ -13,10 +13,10 @@ services:
     image: mysql:8.0
     container_name: mysql_db
     environment:
-      MYSQL_ROOT_PASSWORD: rootpassword
-      MYSQL_DATABASE: mydatabase
+      MYSQL_ROOT_PASSWORD:
+      MYSQL_DATABASE: barberia
       MYSQL_USER: root
-      MYSQL_PASSWORD: 
+      MYSQL_PASSWORD:
     ports:
       - "3306:3306"
     volumes:
