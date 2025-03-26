@@ -1,6 +1,6 @@
 <?php
 $host = 'db'; // En lugar de 'localhost'
-$dbname = 'barberia';
+$dbname = 'mydatabase';
 $user = 'root';
 $password = '';
 

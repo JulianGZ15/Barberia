@@ -14,7 +14,7 @@ services:
     container_name: mysql_db
     environment:
       MYSQL_ROOT_PASSWORD:
-      MYSQL_DATABASE: barberia
+      MYSQL_DATABASE: mydatabase
       MYSQL_USER: root
       MYSQL_PASSWORD:
     ports:
