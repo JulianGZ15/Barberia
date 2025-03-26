@@ -1,15 +1,12 @@
 <?php
-$host = 'db';
-$user = 'root';
-$pass = '';
-$option = array(
-	PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'
-);
+$host = 'db'; // En lugar de 'localhost'
+$dbname = 'mydatabase';
+$user = 'user';
+$password = 'password';
+
 try {
-	$con = new PDO($dsn, $user, $pass, $option);
-	$con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	//echo 'Good Very Good !';
-} catch (PDOException $ex) {
-	echo "Failed to connect with database ! " . $ex->getMessage();
-	die();
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $user, $password);
+    echo "Conexión exitosa!";
+} catch (PDOException $e) {
+    echo "Failed to connect with database! " . $e->getMessage();
 }
